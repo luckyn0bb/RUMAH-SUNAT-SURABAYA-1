@@ -365,4 +365,34 @@ $(function () {
 	$('#blogCarousel').carousel({
 		interval: 5000
 	});
+	/********************** Extras **********************/
+
+// Google map
+function initMap() {
+    var location = {lat: -7.277998504499791, lng: 112.73563081078825};, 
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 15,
+        center: location,
+        scrollwheel: false
+    });
+
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map
+    });
+}
+
+function initBBSRMap() {
+    var la_fiesta = {lat: -7.27799850449979, lng: 112.73563081078825};
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 15,
+        center: la_fiesta,
+        scrollwheel: false
+    });
+
+    var marker = new google.maps.Marker({
+        position: la_fiesta,
+        map: map
+    });
+}
 });
