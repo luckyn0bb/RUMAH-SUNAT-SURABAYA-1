@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1">
     <!-- site metas -->
-    <title>Rumah Sunat Surabaya</title>
+    <title>moon firm</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -119,7 +119,7 @@
                             <span>SURABAYA</span>
 
                             <p>Memperkenalkan Sunat <b>Tanpa Jarum Suntik</b> </p>
-                            <a class="buynow" href="#metode">Metode</a><a class="buynow ggg" href="#contact">Hubungi Kami</a>
+                            <a class="buynow" href="#metode">Metode</a><a class="buynow ggg" href="#adress">Hubungi Kami</a>
 
                         </div>
                     </div>
@@ -132,7 +132,7 @@
                             <span>SURABAYA</span>
 
                             <p>Penyembuhannya cepat! </p>
-                            <a class="buynow" href="#metode">Metode</a><a class="buynow ggg" href="#contact">Hubungi Kami</a>
+                            <a class="buynow" href="#metode">Metode</a><a class="buynow ggg" href="#adress">Hubungi Kami</a>
 
                         </div>
                     </div>
@@ -475,15 +475,16 @@
     </div>
   <br>
   <br>
+  <br>
+  <br>
     <!-- end clients -->
     <!-- contact -->
     <div id="yotubevid" class="container">
         <div class="title">
             <h2>Youtube</h2>
             </div>
-             <div class="embed-responsive embed-responsive-21by9">
-                <iframe class="embed-responsive-item"  width="560" height="315" src="https://youtube.com/playlist?list=PLV8nDy-3jFjH6T_WVVWuDbd3OFYCrWoPY" frameborder="0" allowfullscreen>
-                </iframe>
+             <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLV8nDy-3jFjH6T_WVVWuDbd3OFYCrWoPY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
     </div>
 
@@ -581,30 +582,37 @@
         });
     </script>
     <script>
-        // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-        // Australia.
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 11,
-                center: {
-                    lat: -7.267965,
-                    lng: 112.655654
-                },
-            });
+       function initMap() {
+        var location = {lat: -7.267965, lng: -7.267965};, 
+        var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 15,
+        center: location,
+        scrollwheel: false
+    });
 
-            var image = 'images/maps-and-flags.png';
-            var beachMarker = new google.maps.Marker({
-                position: {
-                    lat: -7.267965,
-                    lng: 112.655654
-                },
-                map: map,
-                icon: image
-            });
-        }
+    var marker = new google.maps.Marker({
+        position: location,
+        map: map
+    });
+}
+
+function initBBSRMap() {
+    var la_fiesta = {lat: -7.267965, lng: 112.655654};
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+        zoom: 15,
+        center: la_fiesta,
+        scrollwheel: false
+    });
+
+    var marker = new google.maps.Marker({
+        position: la_fiesta,
+        map: map
+    });
+}
     </script>
     <!-- google map js -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlPw3GQYI3faa_9mRE6plWuM7xNEmrwH0&callback=initMap"></script>
     <!-- end google map js -->
 </body>
 
